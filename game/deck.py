@@ -19,7 +19,6 @@ class Deck:
         Args:
             self (Die): An instance of Die.
         """
-        self.points = 0
         self.value = 0
 # 3) Create the roll(self) method. Use the following method comment.
     def draw(self):
@@ -30,8 +29,3 @@ class Deck:
 
         rng = random.randint(1,13)
         self.value = rng
-        if rng == 1:
-            rng = 100
-        elif rng == 5:
-            rng = 50
-        self.points = rng 
