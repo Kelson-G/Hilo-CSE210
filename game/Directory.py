@@ -7,8 +7,10 @@ class Director:
     The responsibility of a Director is to control the sequence of play.
 
     Attributes:
+        card_one (int): The value of the first card.
+        card_two (int): The value of the second card.
         is_playing (boolean): Whether or not the game is being played.
-        compare (int): The score for one round of play.
+        compare (boolean): True = higher, False = lower.
         total_score (int): The score for the entire game.
     """
 
