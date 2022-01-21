@@ -10,7 +10,6 @@ class Director:
         card_one (int): The value of the first card.
         card_two (int): The value of the second card.
         is_playing (boolean): Whether or not the game is being played.
-        compare (boolean): True = higher, False = lower.
         total_score (int): The score for the entire game.
     """
 
@@ -71,9 +70,8 @@ class Director:
             return
         
         values = ""
-        for i in range(len(self.dice)):
-            die = self.dice[i]
-            values += f"{die.value} "
+        card = self.dice[i]
+        values += f"{die.value} "
 
         print("Next card was a %d" % ())
         print(f"You rolled: {values}")
