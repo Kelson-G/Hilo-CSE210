@@ -1,3 +1,4 @@
+#Erik Benson wrote/adapted this code for this file.
 import random
 
 
@@ -6,15 +7,15 @@ import random
 # 1) Add the class declaration. Use the following class comment.
 class Deck:
     """A deck of flat playing cards. This will allow the game to be played 
-    by guessing 
+    by guessing whether the next value will be higher or lower than the 
+    currently displayed value.
     Attributes:
         value (int): The number of spots on the side facing up.
-        compare (int): The number of points the die is worth.
     """
 
 # 2) Create the class constructor. Use the following method comment.
     def __init__(self):
-        """Constructs a new instance of Die with a value and points attribute.
+        """Constructs a new instance of Deck with a value and points attribute.
         Args:
             self (Die): An instance of Die.
         """
@@ -27,7 +28,7 @@ class Deck:
             self (Deck): An instance of Deck.
         """
 
-        rng = random.randint(1,6)
+        rng = random.randint(1,13)
         self.value = rng
         if rng == 1:
             rng = 100
