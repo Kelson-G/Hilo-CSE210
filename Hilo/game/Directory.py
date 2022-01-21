@@ -26,9 +26,8 @@ class Director:
         self.card_one = 0
         self.card_two = 0
         self.is_playing = True
-        self.compare = False
         self.total_score = 0
-#Edgar, look at this function.
+
     def start_game(self):
         """Starts the game by running the main game loop.
         
@@ -39,6 +38,7 @@ class Director:
             self.get_inputs()
             self.do_updates()
             self.do_outputs()
+
 #Edgar, look at this function too.
     def get_inputs(self):
         """Ask the user if they want to roll.
