@@ -1,6 +1,10 @@
 # Directory
 from game.deck import Deck
-
+"""
+Edgar, take a look at the two commented functions, make sure they work
+and try to have them done by the evening of Friday January 21. Text us
+in slack if there are any issues and to let us know when you're finished.
+"""
 class Director:
     """A person who directs the game. 
     
