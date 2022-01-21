@@ -1,6 +1,10 @@
 # Directory
 from game.deck import Deck
-
+"""
+Edgar, take a look at the two commented functions, make sure they work
+and try to have them done by the evening of Friday January 21. Text us
+in slack if there are any issues and to let us know when you're finished.
+"""
 class Director:
     """A person who directs the game. 
     
@@ -24,7 +28,7 @@ class Director:
         self.is_playing = True
         self.compare = False
         self.total_score = 0
-
+#Edgar, look at this function.
     def start_game(self):
         """Starts the game by running the main game loop.
         
@@ -35,7 +39,7 @@ class Director:
             self.get_inputs()
             self.do_updates()
             self.do_outputs()
-
+#Edgar, look at this function too.
     def get_inputs(self):
         """Ask the user if they want to roll.
 
