@@ -7,7 +7,7 @@ class Deck:
     by guessing whether the next value will be higher or lower than the 
     currently displayed value.
     Attributes:
-        value (int): The number of spots on the side facing up.
+        value (int): The number on the card.
     """
 
 # 2) The class constructor.
