@@ -1,9 +1,6 @@
 #Erik Benson wrote/adapted this code for this file.
 import random
 
-
-# TODO: Implement the Die class as follows...
-
 # 1) Add the class declaration. Use the following class comment.
 class Deck:
     """A deck of flat playing cards. This will allow the game to be played 
