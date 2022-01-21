@@ -43,8 +43,8 @@ class Director:
         Args:
             self (Director): An instance of Director.
         """
-        roll_dice = input("Roll dice? [y/n] ")
-        self.is_playing = (roll_dice == "y")
+        play_game = input("Play again? [y/n] ")
+        self.is_playing = (play_game == "y")
        
     def do_updates(self):
         """Updates the player's score.
@@ -75,6 +75,7 @@ class Director:
             die = self.dice[i]
             values += f"{die.value} "
 
+        print("Next card was a %d" % ())
         print(f"You rolled: {values}")
         print(f"Your score is: {self.total_score}\n")
         self.is_playing == (self.score > 0)
