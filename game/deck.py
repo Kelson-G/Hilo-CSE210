@@ -33,4 +33,4 @@ class Deck:
             rng = 100
         elif rng == 5:
             rng = 50
-        self.points = rng
+        self.points = rng 
