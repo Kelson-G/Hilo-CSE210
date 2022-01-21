@@ -20,10 +20,11 @@ class Director:
         Args:
             self (Director): an instance of Director.
         """
+        self.card_one = 0
+        self.card_two = 0
         self.is_playing = True
-        self.score = 0
+        self.compare = False
         self.total_score = 0
-
 
     def start_game(self):
         """Starts the game by running the main game loop.
