@@ -1,7 +1,7 @@
 #Erik Benson wrote/adapted this code for this file.
 import random
 
-# 1) Add the class declaration. Use the following class comment.
+# 1) Class declaration
 class Deck:
     """A deck of flat playing cards. This will allow the game to be played 
     by guessing whether the next value will be higher or lower than the 
@@ -10,16 +10,17 @@ class Deck:
         value (int): The number of spots on the side facing up.
     """
 
-# 2) Create the class constructor. Use the following method comment.
+# 2) The class constructor.
     def __init__(self):
         """Constructs a new instance of Deck with a value and points attribute.
         Args:
-            self (Die): An instance of Die.
+            self (Deck): An instance of Deck.
         """
         self.value = 0
-# 3) Create the roll(self) method. Use the following method comment.
+# 3) Create the draw(self) method. 
     def draw(self):
-        """Generates a new random value and compares the points.
+        """Generates a new random value by 'drawing' a card 
+        and compares the points.
         Args:
             self (Deck): An instance of Deck.
         """
