@@ -24,7 +24,7 @@ class Director:
         self.is_playing = True
         self.compare = False
         self.total_score = 0
-
+#Edgar, look at this function.
     def start_game(self):
         """Starts the game by running the main game loop.
         
@@ -35,7 +35,7 @@ class Director:
             self.get_inputs()
             self.do_updates()
             self.do_outputs()
-
+#Edgar, look at this function too.
     def get_inputs(self):
         """Ask the user if they want to roll.
 
@@ -71,7 +71,7 @@ class Director:
         
         values = ""
         card = self.dice[i]
-        values += f"{die.value} "
+        values += f"{deck.value} "
 
         print("Next card was a %d" % ())
         print(f"You rolled: {values}")
