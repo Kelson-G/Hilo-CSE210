@@ -56,14 +56,12 @@ class Director:
         Args:
             self (Director): An instance of Director.
         """
-        if not self.is_playing:
-            return 
+#        if not self.is_playing:
+#            return
 
-        for i in range(len(self.dice)):
-            die = self.dice[i]
-            die.roll()
-            self.score += die.points 
-        self.total_score += self.score
+#        self.card.flip()
+#        self.current_card = self.card.value
+
 
     def do_outputs(self):
         """Displays the dice and the score. Also asks the player if they want to roll again. 
