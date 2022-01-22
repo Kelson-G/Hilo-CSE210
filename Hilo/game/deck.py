@@ -25,5 +25,6 @@ class Deck:
             self (Deck): An instance of Deck.
         """
 
-        rng = random.randint(1,13)
-        self.value = rng
+        self.rng = random.randint(1,13)
+        self.value = self.rng
+        return self.value
