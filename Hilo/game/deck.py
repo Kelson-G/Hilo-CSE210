@@ -17,6 +17,7 @@ class Deck:
             self (Deck): An instance of Deck.
         """
         self.value = 0
+        self.player = 300
 # 3) Create the draw(self) method. 
     def draw(self):
         """Generates a new random value by 'drawing' a card 
@@ -25,6 +26,6 @@ class Deck:
             self (Deck): An instance of Deck.
         """
 
-        self.rng = random.randint(1,13)
-        self.value = self.rng
+        rng = random.randint(1,13)
+        self.value = rng
         return self.value
