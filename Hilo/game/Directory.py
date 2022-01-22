@@ -1,13 +1,11 @@
 # Directory
 from game.deck import Deck
 """
-Edgar, take a look at the two commented functions, make sure they work
-and try to have them done by the evening of Friday January 21. Text us
-in slack if there are any issues and to let us know when you're finished.
+The code seems to be mostly working, but the do_updates function needs
+to be finished for the code to be complete and working.
 """
 class Director:
     """A person who directs the game. 
-    
     The responsibility of a Director is to control the sequence of play.
 
     Attributes:
@@ -30,7 +28,6 @@ class Director:
 
     def start_game(self):
         """Starts the game by running the main game loop.
-        
         Args:
             self (Director): an instance of Director.
         """
@@ -40,10 +37,8 @@ class Director:
             self.do_updates()
             self.do_outputs()
 
-#Edgar, look at this function too.
     def get_inputs(self):
-        """Ask the user if they want to roll.
-
+        """Ask the user if they want to play.
         Args:
             self (Director): An instance of Director.
         """
@@ -56,16 +51,16 @@ class Director:
         Args:
             self (Director): An instance of Director.
         """
-#        if not self.is_playing:
-#            return
+        if not self.is_playing:
+            return
 
-#        self.card.flip()
-#        self.current_card = self.card.value
+        self.card.flip()
+        self.current_card = self.card.value
 
 
     def do_outputs(self):
-        """Displays the dice and the score. Also asks the player if they want to roll again. 
-
+        """Displays the dice and the score. 
+        Also asks the player if they want to roll again. 
         Args:
             self (Director): An instance of Director.
         """
