@@ -35,7 +35,7 @@ class Director:
             self (Director): an instance of Director.
         """
         while self.is_playing:
-            self.draw() 
+               
             self.get_inputs()
             self.do_updates()
             self.do_outputs()

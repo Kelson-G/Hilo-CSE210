@@ -28,4 +28,4 @@ class Deck:
 
         rng = random.randint(1,13)
         self.value = rng
-        return self.value
+        #return self.value
