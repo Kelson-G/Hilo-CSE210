@@ -35,6 +35,7 @@ class Director:
             self (Director): an instance of Director.
         """
         while self.is_playing:
+            self.draw()
             self.get_inputs()
             self.do_updates()
             self.do_outputs()
@@ -46,8 +47,8 @@ class Director:
         Args:
             self (Director): An instance of Director.
         """
-        play_game = input("Play again? [y/n] ")
-        self.is_playing = (play_game == "y")
+        play_game = input("Higher or lower? [h/l] ")
+        self.is_playing = (play_game == "h" or play_game == "l")
        
     def do_updates(self):
         """Updates the player's score.
