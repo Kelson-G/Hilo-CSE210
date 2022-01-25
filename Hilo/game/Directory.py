@@ -17,22 +17,21 @@ class Director:
 
     def __init__(self):
         """Constructs a new Director.
-        
         Args:
             self (Director): an instance of Director.
         """
         self.card_one = 0
         self.card_two = 0
         self.is_playing = True
-        self.total_score = 0
+        self.guess = ""
+        self.total_score = 300
 
     def start_game(self):
         """Starts the game by running the main game loop.
         Args:
             self (Director): an instance of Director.
         """
-        while self.is_playing:
-               
+        while self.is_playing:  
             self.get_inputs()
             self.do_updates()
             self.do_outputs()
@@ -42,25 +41,41 @@ class Director:
         Args:
             self (Director): An instance of Director.
         """
-        play_game = input("Higher or lower? [h/l] ")
+        #Displays the current score.
+        print(f"Current Score is: {self.total_score}")
+        card_one = Deck.draw(self)
+        self.card_one = card_one
+        print(self.card_one)
+        play_game = input("Higher or Lower or Quit? [h/l/q] ")
         self.is_playing = (play_game == "h" or play_game == "l")
-        card_player = input("Playing again? [y/n] ")
-        self.is_playing = (card_player == "y") 
-        
-       
+        self.guess = play_game
+        if play_game == "q":
+            print(f"Final Score: {self.total_score}")
+            print("Thanks for playing!")
+            quit()
+   
     def do_updates(self):
         """Updates the player's score.
-
         Args:
             self (Director): An instance of Director.
         """
         if not self.is_playing:
             return
-
-        self.card.flip()
-        self.current_card = self.card.value
-
-
+        card_two = Deck.draw(self)
+        self.card_two = card_two
+        card_one = self.card_one
+        if card_two > card_one:
+            if self.guess == "h":
+                self.total_score += 100
+            elif self.guess == "l":
+                self.total_score -= 75
+        elif card_two < card_one:
+            if self.guess == "l":
+                self.total_score += 100
+            elif self.guess == "h":
+                self.total_score -= 75
+                
+        
     def do_outputs(self):
         """Displays the dice and the score. 
         Also asks the player if they want to roll again. 
@@ -72,6 +87,6 @@ class Director:
         
         card = self.card_two
 
-        print("Next card was a %d" % (card))
+        print(f"Next card was a {card}")
         print(f"Your score is: {self.total_score}\n")
         self.is_playing == (self.total_score > 0)
