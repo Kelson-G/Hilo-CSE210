@@ -44,6 +44,9 @@ class Director:
         """
         play_game = input("Higher or lower? [h/l] ")
         self.is_playing = (play_game == "h" or play_game == "l")
+        card_player = input("Roll dice? [y/n] ")
+        self.is_playing = (card_player == "y") 
+        
        
     def do_updates(self):
         """Updates the player's score.
