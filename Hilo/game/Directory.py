@@ -44,7 +44,7 @@ class Director:
         """
         play_game = input("Higher or lower? [h/l] ")
         self.is_playing = (play_game == "h" or play_game == "l")
-        card_player = input("Roll dice? [y/n] ")
+        card_player = input("Playing again? [y/n] ")
         self.is_playing = (card_player == "y") 
         
        
