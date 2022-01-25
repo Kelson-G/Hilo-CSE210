@@ -24,7 +24,7 @@ class Director:
         self.card_one = 0
         self.card_two = 0
         self.is_playing = True
-        self.total_score = 0
+        self.total_score = 300
 
     def start_game(self):
         """Starts the game by running the main game loop.
