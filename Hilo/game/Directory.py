@@ -98,4 +98,6 @@ class Director:
         #Also determines if the program ought to terminate due to a too low score.
         print(f"Next card was a {self.card_two}")
         print(f"Your score is: {self.total_score}\n")
-        self.is_playing == (self.total_score > 0)
+        if self.total_score <= 0:
+            print("Game Over!\nResetting Score!\n\n")
+            self.total_score = 300
