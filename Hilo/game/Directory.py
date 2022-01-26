@@ -20,8 +20,9 @@ class Director:
         Args:
             self (Director): an instance of Director.
         """
+        card_two = Deck.draw(self)
         self.card_one = 0
-        self.card_two = 0
+        self.card_two = card_two
         self.is_playing = True
         self.guess = ""
         self.total_score = 300
@@ -44,9 +45,8 @@ class Director:
         """
         #Displays the current score.
         print(f"Current Score is: {self.total_score}")
-        #Sets the first card value.
-        card_one = Deck.draw(self)
-        self.card_one = card_one
+        #Sets the first card value to the last card played.
+        self.card_one = self.card_two
         print(self.card_one)
         #Starts the actual game by inviting the director to make a guess. 
         #It is also possible to quit out here by pressing q.
