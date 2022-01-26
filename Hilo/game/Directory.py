@@ -43,14 +43,26 @@ class Director:
         Args:
             self (Director): An instance of Director.
         """
+        #Creates a while loop that allows for the initial point value to be changed.
+        #This while loop will continue until the player plays or quits the game. Any
+        #other input will rerun the request and continue the loop.
+        play_game = ""
+        while play_game != "h" and play_game != "l" and play_game != "q":
         #Displays the current score.
-        print(f"Current Score is: {self.total_score}")
+            print(f"Current Score is: {self.total_score}")
         #Sets the first card value to the last card played.
-        self.card_one = self.card_two
-        print(self.card_one)
+            self.card_one = self.card_two
+            print(self.card_one)
         #Starts the actual game by inviting the director to make a guess. 
         #It is also possible to quit out here by pressing q.
-        play_game = input("Higher or Lower or Quit? [h/l/q] ")
+            play_game = input("Higher or Lower or Quit or Settings? [h/l/q/s] ")
+        #This is the if/then that allows the player to change the starting score.
+            if play_game == "s":
+                print("Hilo originally starts at 300 points.\nWould you like to change your starting score?")
+                ctrl = input("y/n: ")
+                if ctrl == "y":
+                    starting_value = input("What new point value would you like to start the game at? ")
+                    self.total_score = int(starting_value)
         self.is_playing = (play_game == "h" or play_game == "l")
         #Sets the play_game input equal to the self.guess to determine 
         #the right answer in the next method.
