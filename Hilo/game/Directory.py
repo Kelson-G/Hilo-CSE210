@@ -47,7 +47,7 @@ class Director:
         print(f"Current Score is: {self.total_score}")
         #Sets the first card value to the last card played.
         self.card_one = self.card_two
-        print(self.card_one)
+        print(f"The current card: {self.card_one}")
         #Starts the actual game by inviting the director to make a guess. 
         #It is also possible to quit out here by pressing q.
         play_game = input("Higher or Lower or Quit? [h/l/q] ")
