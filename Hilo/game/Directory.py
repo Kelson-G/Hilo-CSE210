@@ -1,9 +1,6 @@
 # Directory
 from game.deck import Deck
-"""
-The code seems to be mostly working, but the do_updates function needs
-to be finished for the code to be complete and working.
-"""
+
 class Director:
     """A person who directs the game. 
     The responsibility of a Director is to control the sequence of play.
@@ -32,7 +29,7 @@ class Director:
         Args:
             self (Director): an instance of Director.
         """
-        #Loop, determins if the game continues running.
+        #Loop, determines if the game continues running.
         while self.is_playing:  
             self.get_inputs()
             self.do_updates()
@@ -51,16 +48,11 @@ class Director:
         #Displays the current score.
             print(f"Current Score is: {self.total_score}")
         #Sets the first card value to the last card played.
-<<<<<<< HEAD
-        self.card_one = self.card_two
-        print(f"The current card: {self.card_one}")
-=======
             self.card_one = self.card_two
-            print(self.card_one)
->>>>>>> ca746630d75ed4936b9d5d6bebabf6ba34e441c3
+            print(f"The current card: {self.card_one}")
         #Starts the actual game by inviting the director to make a guess. 
         #It is also possible to quit out here by pressing q.
-            play_game = input("Higher or Lower or Quit or Settings? [h/l/q/s] ")
+            play_game = input("\nHigher or Lower or Quit or Settings? [h/l/q/s] ")
         #This is the if/then that allows the player to change the starting score.
             if play_game == "s":
                 print("Hilo originally starts at 300 points.\nWould you like to change your starting score?")
